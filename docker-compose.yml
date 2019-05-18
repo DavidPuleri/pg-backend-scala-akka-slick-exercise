@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  database:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - 9906:3306
+    volumes:
+      - /Users/david/Workspace/dockerVolumes/dojo:/var/lib/mysql
